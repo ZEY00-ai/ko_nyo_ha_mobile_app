@@ -4,6 +4,49 @@ Aplikasi pemesanan dan manajemen operasional kafe berbasis **Flutter** untuk **K
 
 ---
 
+## 🚀 Cara Menjalankan Proyek di Laptop Lain
+
+### Prasyarat
+Pastikan perangkat tujuan sudah terpasang:
+* [Flutter SDK](https://docs.flutter.dev/get-started/install)
+* Git
+* Android Studio / VS Code (beserta Emulator Android atau perangkat HP fisik dengan *USB Debugging* aktif)
+* Koneksi internet (untuk terhubung ke *cloud* Supabase)
+
+### Langkah Instalasi
+
+1. **Clone Repository**
+   ```bash
+   git clone <url-repository-konyoha>
+   cd konyoha_mobile
+   ```
+
+2. **Konfigurasi Environment (`.env`)**
+   Buat file baru bernama `.env` di direktori utama proyek (sejajar dengan `pubspec.yaml`), lalu isi dengan kredensial Supabase proyek:
+   ```env
+   SUPABASE_URL=[https://xxxxxxxxxxxx.supabase.co](https://xxxxxxxxxxxx.supabase.co)
+   SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6...
+   ```
+
+3. **Unduh Dependensi Flutter**
+   ```bash
+   flutter doctor
+   flutter pub get
+   ```
+
+4. **Jalankan Code Generator (Opsional — jika menggunakan `riverpod_generator`)**
+   ```bash
+   dart run build_runner build --delete-conflicting-outputs
+   ```
+
+5. **Jalankan Aplikasi**
+   Pastikan emulator sudah menyala atau HP Android sudah terhubung, lalu jalankan:
+   ```bash
+   flutter devices
+   flutter run
+   ```
+---
+
 ## 🛠️ Tech Stack
 
 * **Framework:** Flutter (Dart)
