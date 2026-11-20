@@ -116,8 +116,9 @@ lib/
 Berikut adalah gambaran tabel utama yang perlu disiapkan di dashboard Supabase:
 
 1. **`profiles` (Users)**
-   * `id` (UUID, Primary Key, relasi ke `auth.users`)
+   * `id` (UUID, Primary Key)
    * `name` (String)
+   * `email` (VARCHAR(255), UNIQUE)
    * `role` (Enum/String: `'kasir'`, `'pemilik'`)
 2. **`menus`**
    * `id` (UUID / Serial, Primary Key)
@@ -129,6 +130,7 @@ Berikut adalah gambaran tabel utama yang perlu disiapkan di dashboard Supabase:
 3. **`orders`**
    * `id` (UUID / Serial, Primary Key)
    * `customer_name` (String)
+   * `customer_phone` (Integer)
    * `order_type` (String: `'dine_in'`, `'take_away'`, `'delivery'`)
    * `delivery_address` (Text, *Nullable — wajib diisi jika total item > 8 & pilih delivery*)
    * `total_items` (Integer)
@@ -158,7 +160,7 @@ Berikut adalah gambaran tabel utama yang perlu disiapkan di dashboard Supabase:
    flutter pub get
    ```
 
-3. **Konfigurasi Environment Supabase:**
+3. **Konfigurasi Environment Supabase: |silahka tanya daffa| **
    Buat file `.env` pada root proyek dan masukkan kredensial proyek Supabase milikmu:
    ```env
    SUPABASE_URL=https://your-project-id.supabase.co
@@ -174,9 +176,4 @@ Berikut adalah gambaran tabel utama yang perlu disiapkan di dashboard Supabase:
 
 ## 📅 Roadmap Pengembangan
 
-- [x] Perancangan arsitektur sistem & aturan bisnis
-- [ ] Setup proyek Flutter, struktur folder Riverpod, & koneksi Supabase
-- [ ] Implementasi fitur Pengunjung (Katalog, Kustomisasi, Keranjang, Aturan Delivery $> 8$ item)
-- [ ] Implementasi autentikasi & fitur Kasir (Order masuk & Riwayat Pesanan)
-- [ ] Implementasi fitur Pemilik (CRUD Menu)
-- [ ] Penerapan desain UI/UX final & pengujian (*Testing*)
+https://docs.google.com/spreadsheets/d/1SZeMZHw-lKSZrE_BCZnBcdpO_3ArDF-m59I34LTSNvY/edit?usp=sharing
