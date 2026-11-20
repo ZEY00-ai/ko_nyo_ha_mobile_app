@@ -17,8 +17,8 @@ Pastikan perangkat tujuan sudah terpasang:
 
 1. **Clone Repository**
    ```bash
-   git clone <url-repository-konyoha>
-   cd konyoha_mobile
+   git clone https://github.com/ZEY00-ai/ko_nyo_ha_mobile_app.git
+   cd ko_nyo_ha_mobile_app
    ```
 
 2. **Konfigurasi Environment (`.env`)**
