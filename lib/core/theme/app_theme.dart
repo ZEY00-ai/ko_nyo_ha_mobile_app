@@ -49,7 +49,7 @@ class AppTheme {
   static const Color warningColor = Color(0xFFFFA000);
 
   // =========================================================================
-  // 2. KONFIGURASI TEMA TERANG GLOBAL (LIGHT THEME)
+  // 2. KONFIGURASI TEMA TERANG GLOBAL 
   // Digunakan di app.dart untuk menyelaraskan tampilan APK Pengunjung & Staff
   // =========================================================================
   static ThemeData get lightTheme {
